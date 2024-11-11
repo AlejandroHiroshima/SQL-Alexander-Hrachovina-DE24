@@ -1,2 +1,3 @@
 # SQL course using duckdb
-# testing testing
+
+jag lär mig sql
