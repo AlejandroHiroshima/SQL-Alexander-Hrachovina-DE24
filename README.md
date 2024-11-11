@@ -1,1 +1,1 @@
-# SQL-Alexander-Hrachovina-DE24
+# SQL course using duckdb
