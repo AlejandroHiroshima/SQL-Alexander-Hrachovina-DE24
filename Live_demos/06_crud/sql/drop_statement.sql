@@ -1,0 +1,4 @@
+-- DDL
+SELECT * FROM information_schema.tables; -- vISAR TABELLERNA VI HAR, OCH VISAR ÄVEN VILKET SCHEMA DE LIGGER I
+
+DROP SCHEMA database.python;
