@@ -1,6 +1,11 @@
 -- DML data manipulation language
-INSERT INTO database.duckdb (word, description)--lägger till nåt i schema database
-VALUES ('DML', 'Data manipulation language');
+--lägger till nåt i schema database tabell duckdb
+INSERT
+	INTO
+	database.duckdb (word,
+	description)
+VALUES ('DML',
+'Data manipulation language');
 
 INSERT
 	INTO
@@ -8,7 +13,7 @@ INSERT
 	description)
 VALUES 
 ('DuckDB',
-'An in-process SQL OLAP database management system designed for fast analytical queries.'), -- VARJE VALUE INOM PARATENES
+'An in-process SQL OLAP database management system designed for fast analytical queries.'), -- VARJE RAD INOM PARATENES
 ('Sequence',
 'A database object that generates a sequence of unique numbers, typically used for auto-incrementing columns.'),
 ('VARCHAR',

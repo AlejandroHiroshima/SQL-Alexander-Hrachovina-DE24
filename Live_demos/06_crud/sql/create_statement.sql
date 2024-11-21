@@ -1,14 +1,14 @@
 -- DDL Data definition language
 CREATE SCHEMA IF NOT EXISTS database;
-
+-- hur man får fram metadata 
 SELECT * FROM information_schema.schemata;
 -- Skapar en sekvens som innehåller värde, startar från 1
 CREATE SEQUENCE IF NOT EXISTS id_duckdb_sequence START 1;
-
+-- Tar fram annan metadata (sekvenser i detta fall)
 SELECT * FROM pg_catalog.pg_sequences;
 -- skapar tabell i schema database, så tabellen hamnar inte under main, utan under database
 CREATE TABLE IF NOT EXISTS database.duckdb (
-	id INTEGER DEFAULT nextval('id_duckdb_sequence'), -- DEFAULT är värdet som skrivs om man inte specar värde själv
+	id INTEGER DEFAULT nextval('id_duckdb_sequence'), -- DEFAULT är värdet som skrivs om man inte specar värde själv. Denna rad använder sekvensen vi skapade några rader upp
 	word STRING, --STRING, VARCHAR eller TEXT spelar ingen större roll
 	description STRING
 );

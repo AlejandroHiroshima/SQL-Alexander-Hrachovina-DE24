@@ -1,4 +1,4 @@
 -- DDL
-SELECT * FROM information_schema.tables; -- vISAR TABELLERNA VI HAR, OCH VISAR ÄVEN VILKET SCHEMA DE LIGGER I
+SELECT * FROM information_schema.tables; -- VISAR TABELLERNA VI HAR, OCH VISAR ÄVEN VILKET SCHEMA DE LIGGER I (Meta data)
 
-DROP SCHEMA database.python;
+DROP SCHEMA database.python; -- Tar bort schema
