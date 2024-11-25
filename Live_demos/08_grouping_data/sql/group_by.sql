@@ -24,9 +24,10 @@ SELECT
 FROM
 	main.clean_food
 GROUP BY
-	year
+	year,
+	number_of_searches
 HAVING
-number_of_searches > 300000
+number_of_searches > 3000
 ORDER BY
 	number_of_searches;
 
