@@ -3,7 +3,7 @@ SELECT * FROM staging.sql_glossary sg ;
 -- Array like slicing
 SELECT
 	sql_word,
-	sql_word[:2], -- Slicing, som i Python nästan
+	sql_word[:2], -- Slicing, som i Python NÄSTAN
 	sql_word[2:5]
 FROM
 	staging.sql_glossary sg ;
@@ -29,7 +29,7 @@ FROM
 SELECT
 	TRIM(sql_word) AS trimmed_word,
 	trimmed_word[1],
-	trimmed_word[-1] -- Tar bort spaces till höer och vänster
+	trimmed_word[-1]
 FROM
 	staging.sql_glossary sg
 	
