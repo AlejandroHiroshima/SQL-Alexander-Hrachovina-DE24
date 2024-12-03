@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS refined.sql_glossary_example_fixed AS ( -- FUNKAR!
 SELECT
     example,
     CASE
-        WHEN LOWER(example) LIKE '%select%' THEN REPLACE(REGEXP_REPLACE(TRIM(LOWER(example)), ' +', ' ', 'g'), 'select', 'SELECT')
+        WHEN LOWER(example) LIKE '%select%' THEN REPLACE(REGEXP_REPLACE(LOWER(TRIM(example)), ' +', ' ', 'g'), 'select', 'SELECT')
         WHEN LOWER(example) LIKE '%from%' THEN REPLACE(REGEXP_REPLACE(TRIM(LOWER(example)), ' +', ' ', 'g'), 'from', 'FROM')
         WHEN LOWER(example) LIKE '%where%' THEN REPLACE(REGEXP_REPLACE(TRIM(LOWER(example)), ' +', ' ', 'g'), 'where', 'WHERE')
         WHEN LOWER(example) LIKE '%join%' THEN REPLACE(REGEXP_REPLACE(TRIM(LOWER(example)), ' +', ' ', 'g'), 'join', 'JOIN')
@@ -51,3 +51,19 @@ SELECT
     
 SELECT example, UPPER(TRIM(example)) AS modified_example
 FROM refined.sql_glossary_version_three;
+
+SELECT
+    example,
+    CASE
+        WHEN LOWER(example) = 'select' THEN UPPER(example)
+        WHEN LOWER(example) = 'create table' THEN UPPER(example)
+        WHEN LOWER(example) = 'select*from' THEN UPPER(example)
+        WHEN LOWER(example) = 'from' THEN UPPER(example)
+        WHEN LOWER(example) = 'insert into' THEN UPPER(example)
+        WHEN LOWER(example) = 'drop table' THEN UPPER(example)
+        ELSE example
+    END AS modified_example
+FROM refined.sql_glossary2;
+ 
+
+
